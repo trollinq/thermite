@@ -134,11 +134,13 @@ class App extends React.Component {
       document.getElementById('access-frame').src='load.html'
     });
     _defineProperty(this, "browseApps", () => {
-      //Materialize.toast("yo", 5000)
-      document.getElementById('access-frame').style.display = 'block';
-      document.getElementById('app').style.display = 'none';
-      document.getElementById('access-frame').src='apps.html'
+     // make the main html page not cancer;
+     document.getElementById('app').style.display='none';
+     document.getElementById('apps').style.display='block';
     });
+    _defineProperty(this, "settings", () => {
+      Materialize.toast("work in progress", 5000)
+    })
     const currentYear = new Date().getFullYear();
     this.state = { currentYear };
   }
@@ -180,6 +182,11 @@ class App extends React.Component {
             "button",
             { className: "btn dark-grey", onClick: this.browseApps },
             "Browse Apps"
+          ),
+          React.createElement(
+            "button",
+            { className: "btn dark-grey", onClick: this.settings },
+            "Settings"
           )
         ),
 
