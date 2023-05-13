@@ -69,8 +69,6 @@
             startpage: 'https://www.startpage.com/sp/search?query='
         };
         if ('serviceWorker' in navigator) {
-            console.log("request received :coolkid:")
-            console.log(localStorage.getItem("thermite!!search"))
             navigator.serviceWorker.getRegistration("./sw.js").then(async worker => {
                 if(!worker) await navigator.serviceWorker.register('./sw.js', { scope: __uv$config.prefix });
                 let url = atob(localStorage.getItem("thermite!!search")||btoa("stop searching nil bruv"));
@@ -79,15 +77,16 @@
                     if (!isUrl(url)) url = search + url;
                     else if (!(url.startsWith('https://') || url.startsWith('http://'))) { url = 'http://' + url; };
                 } else { url = new URL(search).origin }
-                localStorage.setItem("thermite!!search",null) 
+
+                localStorage.setItem("thermite!!search",null) // *removes cutely* 
                 window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url)
             });
         } else {
             document.querySelector('.lds-dual-ring').remove();
             if(window.location.protocol == 'http:') {
-                document.querySelector('.info').textContent = 'You are using http:// and your browser seems to be blocking service workers because of that. Try using https://.'
+                document.querySelector('.info').textContent = 'Please use https and not http, as it disallows service workers!'
             } else {
-                document.querySelector('.info').textContent = `Your browser does not support service workers or is blocking them (private browsing mode?). Try swapping or updating your browser.`
+                document.querySelector('.info').textContent = `Your browser does not support service workers! Please switch browsers or turn off guest mode.`
             }
         };
 

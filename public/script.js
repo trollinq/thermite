@@ -134,6 +134,7 @@ class App extends React.Component {
       document.getElementById('access-frame').src='load.html'
     });
     _defineProperty(this, "browseApps", () => {
+      //Materialize.toast("yo", 5000)
       document.getElementById('access-frame').style.display = 'block';
       document.getElementById('app').style.display = 'none';
       document.getElementById('access-frame').src='apps.html'
