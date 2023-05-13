@@ -1,13 +1,15 @@
-really rushed!
-when hosting, use nodejs, not html.
-i swear its extremely light weight! (without the node modules folder, yes)
+Used to bypass webfilters/spyware. Focused on privacy and security.
 
 # thermite
  a proxy thing idk
 
 # features
-    simple design:
-        how do you get lost with 2 buttons and 1 textbox.
-    privacy:
-        even if you tried touching the iframe src value it doesnt use the url to store it
-        also no antalytics, logging, and any other stuff like that.
+    > simple design:
+        > 3 buttons and a textbox on the front page
+        > 3 options in settings
+        > literally just clicking the games/apps icons in apps tab.
+        how do you get lost/confused in that?
+
+    > privacy:
+        > no logging
+        > no stored info other than temporary stored URLs (encrypted & removed right after they are proccessed) & Settings which are completely anonymous.
