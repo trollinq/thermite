@@ -1,15 +1,20 @@
-Used to bypass webfilters/spyware. Focused on privacy and security.
+# Thermite
+privacy & security based proxy.
 
-# thermite
- a proxy thing idk
+# Features
+- Security: Thermite attempts to hide from your browser history & also trys to hide all data, with all data being wiped when not needed.
+- Privacy: Nothing is logged, nothing will ever be logged, and Thermite will always be open sourced.
+- Fast: Thermite is designed to be fast, and the only thing hindering Thermite is the server its hosted on.
+- Game/App library: Thanks to 3kh0, there are over 300 games to browse easily and fast, with just a click of a button!
 
-# features
-    > simple design:
-        > 3 buttons and a textbox on the front page
-        > 3 options in settings
-        > literally just clicking the games/apps icons in apps tab.
-        how do you get lost/confused in that?
+# Contributors
+- (3kh0)[https://github.com/3kh0] - Games
+- (Titanium Network)[https://github.com/titaniumnetwork-dev] - Ultraviolet & and a learning source.
 
-    > privacy:
-        > no logging
-        > no stored info other than temporary stored URLs (encrypted & removed right after they are proccessed) & Settings which are completely anonymous.
+# Setup
+```
+git clone https://github.com/trollinq/thermite.git
+cd thermite
+npm install
+npm start
+```
