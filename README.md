@@ -8,8 +8,8 @@ privacy & security based proxy.
 - Game/App library: Thanks to 3kh0, there are over 300 games to browse easily and fast, with just a click of a button!
 
 # Contributors
-- (3kh0)[https://github.com/3kh0] - Games
-- (Titanium Network)[https://github.com/titaniumnetwork-dev] - Ultraviolet & and a learning source.
+- [3kh0](https://github.com/3kh0) - Games
+- [Titanium Network](https://github.com/titaniumnetwork-dev) - Ultraviolet & and a learning source.
 
 # Setup
 ```
