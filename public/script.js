@@ -19,9 +19,10 @@ class App extends React.Component {
       // set the localstorage to nil when we process it
       localStorage.setItem("thermite!!search",btoa(document.getElementsByName("searchBar")[0].value))
       document.getElementById('access-frame').style.display = 'block';
+      document.getElementById('app').style.display = 'none';
       document.getElementById('access-frame').src='load.html'
     });
-    _defineProperty(this, "browseGames", () => {
+    _defineProperty(this, "browseApps", () => {
       Materialize.toast('work in progress', 5000);
     });
     const currentYear = new Date().getFullYear();
@@ -63,8 +64,8 @@ class App extends React.Component {
           ),
           React.createElement(
             "button",
-            { className: "btn dark-grey", onClick: this.browseGames },
-            "Browse Games"
+            { className: "btn dark-grey", onClick: this.browseApps },
+            "Browse Apps"
           )
         ),
 
@@ -74,7 +75,7 @@ class App extends React.Component {
           React.createElement(
             "div",
             null,
-            React.createElement("small", null, "use thermite against spyware")
+            React.createElement("small", null, "use thermite against spyware!")
           )
         )
       )

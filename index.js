@@ -1,4 +1,6 @@
 import createBareServer from "@tomphttp/bare-server-node";
+import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
+
 import { fileURLToPath } from "node:url";
 import { createServer as createHttpsServer } from "node:https";
 import { createServer as createHttpServer } from "node:http";
@@ -22,6 +24,7 @@ app.use((req, res, next) => {
 });
 
 app.use(serveStatic(fileURLToPath(new URL("./public", import.meta.url))));
+app.use("/uv/", serveStatic(uvPath));
 
 app.use((req, res) => {
   res.writeHead(500, null, {
