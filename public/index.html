@@ -16,7 +16,10 @@
   <body>
     <div id="app"></div> 
     <div style="display: none;" id="apps">
-      <h2><strong title="go back" onClick="javascript:document.getElementById('app').style.display='block';document.getElementById('apps').style.display='none';" id="nawhh">All Apps<span id="nahh"></span></strong></h2>
+      <h2><strong title="go back" onClick="javascript:document.getElementById('app').style.display='block';document.getElementById('apps').style.display='none';" id="realll">Apps<span id="vmj"></span></strong></h2>
+      <div class="cards" id="reagl">
+      </div>
+      <h2><strong id="nawhh">‮<span id="nahh"></span>s​e​m​a​​G</strong></h2>
       <div class="cards" id="real">
       </div>
       <h2><strong>credits to 3kh0 for games</strong></h2>
@@ -33,6 +36,12 @@
             iframe.src = url;
             win.document.body.appendChild(iframe);
         }
+        function reverse(s) {
+  var o = '';
+  for (var i = s.length - 1; i >= 0; i--)
+    o += s[i];
+  return o;
+}
         // my code is the definition of sucking.
         var actualGames = '';
         var uwu = [
@@ -2175,7 +2184,7 @@
         ]
         for (i=0;i<uwu.length;i++){
           const balls = uwu[i]
-          document.getElementById("nahh").innerText=`( ${i} )`
+          document.getElementById("nahh").innerText=`( ${reverse(i.toString())} )`
           actualGames+=`<figure onclick="javascript:localStorage.setItem('thermite!!search',btoa('https://raw.githack.com/3kh0/3kh0-assets/main/${balls.root}/${balls.file}'));create('${location.origin}/load.html');" class="card"><img src="https://raw.githack.com/3kh0/3kh0-assets/main/${balls.root}/${balls.img}"/><figcaption>${balls.name}</figcaption></figure>`;
           if (i==uwu.length-1) {
             document.getElementById("real").innerHTML=actualGames

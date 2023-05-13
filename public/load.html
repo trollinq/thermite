@@ -61,8 +61,8 @@
         <p class="info">Please wait while we use thermite to bypass your web filter!</p>
     </div>
     <script>
-        const alwaysHttps = localStorage.getItem("thermite!!https") || false // even though it provides privacy, it breaks certain websites.
-        const engines = { // google & bing might be removed due to privacy reaasons
+        const alwaysHttps = localStorage.getItem("thermite!!https")==="true" // even though it provides privacy, it breaks certain websites.
+        const engines = { 
             google: 'https://google.com/search?q={query}', 
             ddg: 'https://duckduckgo.com/?q={query}',
             bing: 'https://bing.com/search?q={query}',

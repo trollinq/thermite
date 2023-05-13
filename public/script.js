@@ -139,7 +139,7 @@ class App extends React.Component {
      document.getElementById('apps').style.display='block';
     });
     _defineProperty(this, "settings", () => {
-      Materialize.toast("work in progress", 5000)
+      alert("this part of thermite is really unpolished! please prepare your eyes for very ugly ui.");location="./settings.html"
     })
     const currentYear = new Date().getFullYear();
     this.state = { currentYear };
