@@ -155,12 +155,12 @@ class App extends React.Component {
             "flex-align-center-justify-center-direction-column view-height p-all",
         },
         React.createElement("img", {
-          className: "foresight-logo m-bottom",
+          className: "thermite-logo m-bottom",
           src: "icon.png",
         }),
         React.createElement(
           "div",
-          { className: "foresight-search-bar fill-space m-bottom" },
+          { className: "thermite-search-bar fill-space m-bottom" },
           React.createElement("input", {
             type: "text",
             id: "searchBar",
