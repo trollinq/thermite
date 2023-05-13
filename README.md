@@ -1,4 +1,5 @@
-btw this was rushed and made in around 2 hours. the front end is basically all stolen other than some modifications. please dont cry about bugs.
+really rushed!
+when hosting, use nodejs, not html!
 
 # thermite
 a better way to bypass spyware.
