@@ -16,6 +16,8 @@ function _defineProperty(obj, key, value) {
 
 var textArray = [
   ["use thermite against spyware!"],
+  ["burning holes straight through spyware with thermite!"],
+  ["my bad for all the nerdy quotes, i was too bored to actually make them."],
   ["Life isn’t about getting and having, it’s about giving and being.", "Kevin Kruse"],
 ["Whatever the mind of man can conceive and believe, it can achieve.", "Napoleon Hill"],
 ["Strive not to be a success, but rather to be of value.", "Albert Einstein"],
