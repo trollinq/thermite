@@ -2,7 +2,7 @@ really rushed!
 when hosting, use nodejs, not html!
 
 # thermite
-a better way to bypass spyware.
+ a proxy thing idk
 
 # features
     simple design:
