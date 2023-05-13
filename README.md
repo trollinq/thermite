@@ -1,5 +1,6 @@
 really rushed!
-when hosting, use nodejs, not html!
+when hosting, use nodejs, not html.
+i swear its extremely light weight! (without the node modules folder, yes)
 
 # thermite
  a proxy thing idk
