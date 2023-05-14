@@ -3,33 +3,23 @@
 <head><script src="./uv/uv.bundle.js"></script><script src="./uv/uv.config.js"></script><link rel="stylesheet" href="./style.css"><style>.msg,body{display:flex}body{flex-direction:column;justify-content:center;min-height:100vh;margin:0;align-items:center}.msg{justify-content:center;align-items:center;flex-direction:column}p{font-family:Ubuntu,sans-serif}.info{color:#fff;max-width:600px;text-align:center;margin:35px 0 0}.lds-dual-ring{display:inline-block;width:160px;height:160px}.lds-dual-ring:after{content:" ";display:block;width:128px;height:128px;margin:16px;border-radius:50%;border:12px solid #fff;border-color:#fff transparent;animation:1.2s linear infinite lds-dual-ring}@keyframes lds-dual-ring{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}</style></head>
 <body>
     <div class="msg"><div class="lds-dual-ring"></div><p class="info">Please wait while we use thermite to bypass your web filter!</p></div><script>
-        const alwaysHttps = localStorage.getItem("thermite!!https")==="true" // even though it provides privacy, it breaks certain websites.
-        const engines = { google: 'https://google.com/search?q={query}', ddg: 'https://duckduckgo.com/?q={query}',bing: 'https://bing.com/search?q={query}',brave: 'https://search.brave.com/search?q={query}',startpage: 'https://www.startpage.com/sp/search?query={query}',qwant: 'https://www.qwant.com/?q={query}&t=web',swisscow: 'https://swisscows.com/en/web?query={query}',mojeek: 'https://www.mojeek.com/search?q={query}'};
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistration("./sw.js").then(async worker => {
-                if(!worker) await navigator.serviceWorker.register('./sw.js', { scope: __uv$config.prefix });
-                let url = atob(localStorage.getItem("thermite!!search")); // might change the encryption :)
-                let search = engines[localStorage.getItem('thermite!!engine') || 'ddg'];
-
-                if (url) {
-                    if (!isUrl(url)) url = search.replace("{query}", url);
-                    else if (!(url.startsWith('https://') || url.startsWith('http://'))) { url = (alwaysHttps&&'https://')||'http://' + url; };
-                } else { url = new URL(search.replace('{query}', 'nil search')).origin }
-                url = (alwaysHttps&&url.replace("http://","https://"))||url // realest.
-
+        const alwaysHttps=localStorage.getItem("thermite!!https")==="true" // even though it provides privacy,it breaks certain websites.
+        const engines={google:'https://google.com/search?q={query}',ddg:'https://duckduckgo.com/?q={query}',bing:'https://bing.com/search?q={query}',brave:'https://search.brave.com/search?q={query}',startpage:'https://www.startpage.com/sp/search?query={query}',qwant:'https://www.qwant.com/?q={query}&t=web',swisscow:'https://swisscows.com/en/web?query={query}',mojeek:'https://www.mojeek.com/search?q={query}'};
+        if ('serviceWorker'in navigator){
+            navigator.serviceWorker.getRegistration("./sw.js").then(async worker=>{
+                if(!worker)await navigator.serviceWorker.register('./sw.js',{scope:__uv$config.prefix});
+                let url=atob(localStorage.getItem("thermite!!search")),search=engines[localStorage.getItem('thermite!!engine') || 'ddg'];
+                if(url){if(!isUrl(url))url=search.replace("{query}",url);else if(!(url.startsWith('https://')||url.startsWith('http://'))){url=(alwaysHttps&&'https://')||'http://'+url;};}else{url=new URL(search.replace('{query}','nil search')).origin}
+                url=(alwaysHttps&&url.replace("http://","https://"))||url 
                 localStorage.setItem("thermite!!search",null)
-                window.location.href = ` ${__uv$config.prefix}${__uv$config.encodeUrl(url)}`
+                window.location.href=`${__uv$config.prefix}${__uv$config.encodeUrl(url)}`
             });
         } else {
             document.querySelector('.lds-dual-ring').remove();
-            if(window.location.protocol == 'http:') {
-                document.querySelector('.info').textContent = 'Please use https and not http, as it disallows service workers!'
-            } else {
-                document.querySelector('.info').textContent = `Your browser does not support service workers! Please switch browsers or turn off guest mode.`
-            }
+            if(window.location.protocol=='http:'){document.querySelector('.info').textContent='Please use https and not http,as it disallows service workers!'}else{document.querySelector('.info').textContent=`Your browser does not support service workers! Please switch browsers or turn off guest mode.`}
         };
-        function isUrl(val = '') {
-            if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
+        function isUrl(val='') {
+            if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0,1) !== ' ') return true;
             return false;
         }
     </script>
