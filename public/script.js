@@ -141,8 +141,6 @@ class App extends React.Component {
     _defineProperty(this, "settings", () => {
       alert("this part of thermite is really unpolished! please prepare your eyes for very ugly ui.");location="./settings.html"
     })
-    const currentYear = new Date().getFullYear();
-    this.state = { currentYear };
   }
   render() {return React.createElement("div",null,React.createElement("div",{className:"flex-align-center-justify-center-direction-column view-height p-all"},React.createElement("img",{className:"thermite-logo m-bottom",src:"icon.png"}),React.createElement("div",{className:"thermite-search-bar fill-space m-bottom"},React.createElement("input",{type:"text",id:"searchBar",name:"searchBar",placeholder:"Search"}),React.createElement("i",{className:"material-icons"},"search")),React.createElement("div",{className:"m-bottom"},React.createElement("button",{className:"btn primary m-right",onClick:this.searching},"Search"),React.createElement("button",{className:"btn dark-grey",onClick:this.browseApps},"Browse Apps"),React.createElement("button",{className:"btn dark-grey",onClick:this.settings},"Settings")),React.createElement("div",{className:"text-center transparent text-grey font-lighter"},React.createElement("div",null,React.createElement("small",null,textArray[randomNumber][1]&&`${textArray[randomNumber][0]} - ${textArray[randomNumber][1]}`||textArray[randomNumber][0])))));}
 }
