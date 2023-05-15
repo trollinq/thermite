@@ -194,11 +194,8 @@
     <script>
         Materialize.toast("settings is unfinished and will be polished later.", 99999999)
         function saveChanges(){
-            console.log(document.getElementById("alwaysHttps").checked)
             localStorage.setItem("thermite!!https", document.getElementById("alwaysHttps").checked)
             localStorage.setItem('thermite!!engine', document.getElementById("searchEngine").value)
-            console.log(`new https: ${document.getElementById("alwaysHttps").checked} / ${localStorage.getItem("thermite!!https")}`)
-            console.log(`new search engine: ${document.getElementById("searchEngine").value} / ${localStorage.getItem("thermite!!engine")}`)
         }
         if (localStorage.getItem("thermite!!https") === "true") {
             document.getElementById("alwaysHttps").checked = localStorage.getItem("thermite!!https")
